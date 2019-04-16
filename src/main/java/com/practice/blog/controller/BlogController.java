@@ -51,5 +51,9 @@ public class BlogController {
 	public Blog upvote(@PathVariable String _id){
 		return blogService.upVote(_id);
 	}
+	@DeleteMapping(path="/blog/{_id}")
+	public Blog removeBlog(@PathVariable String _id) {
+		return blogService.removeBlog(_id);
+	}
 
 }

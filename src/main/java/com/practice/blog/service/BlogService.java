@@ -40,4 +40,10 @@ public class BlogService {
 	public Blog getBlog(String _id){
 		return blogRepository.findById(_id).orElse(null);
 	}
+	public Blog removeBlog(String _id) {
+		// TODO Auto-generated method stub
+		Blog b=getBlog(_id);
+		blogRepository.delete(b);
+		return b;
+	}
 }
